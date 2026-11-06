@@ -44,7 +44,9 @@ async def _setup(hass: HomeAssistant, entry: MockConfigEntry) -> None:
     await hass.async_block_till_done()
 
 
-async def test_config_flow_success(hass: HomeAssistant, recorder_mock, mock_client: AsyncMock) -> None:
+async def test_config_flow_success(
+    hass: HomeAssistant, recorder_mock, mock_client: AsyncMock, caplog: pytest.LogCaptureFixture
+) -> None:
     result = await hass.config_entries.flow.async_init(DOMAIN, context={"source": "user"})
     assert result["type"] is FlowResultType.FORM
     result = await hass.config_entries.flow.async_configure(result["flow_id"], CREDS)
@@ -53,6 +55,7 @@ async def test_config_flow_success(hass: HomeAssistant, recorder_mock, mock_clie
     assert result["title"] == "Viacqua 19000001"
     assert result["data"] == CREDS
     assert result["result"].unique_id == "user@example.com"
+    assert "closes the Home Assistant aiohttp session" not in caplog.text
 
 
 @pytest.mark.parametrize(

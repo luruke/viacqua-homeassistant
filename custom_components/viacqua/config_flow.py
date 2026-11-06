@@ -29,8 +29,9 @@ class ViacquaConfigFlow(ConfigFlow, domain=DOMAIN):
 
     async def _validate(self, username: str, password: str) -> tuple[dict[str, str], str | None]:
         """Try to log in. Returns (errors, title)."""
-        session = async_create_clientsession(self.hass)
-        client = ViacquaClient(username, password, session=session)
+        # Fresh session (own cookie jar) per attempt; HA closes it on shutdown.
+        # Never close it ourselves: HA flags that as a bug.
+        client = ViacquaClient(username, password, session=async_create_clientsession(self.hass))
         try:
             await client.login()
             contracts = await client.get_contracts()
@@ -39,8 +40,6 @@ class ViacquaConfigFlow(ConfigFlow, domain=DOMAIN):
         except (ViacquaError, TimeoutError, OSError):
             _LOGGER.exception("Cannot connect to Viacqua")
             return {"base": "cannot_connect"}, None
-        finally:
-            await session.close()
         if not contracts:
             return {"base": "no_contracts"}, None
         return {}, f"Viacqua {contracts[0].contract_number}"
