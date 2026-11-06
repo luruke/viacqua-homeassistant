@@ -1,0 +1,14 @@
+{
+  "entity": {
+    "sensor": {
+      "meter_reading": {"default": "mdi:water-pump"},
+      "daily_average": {"default": "mdi:water-outline"},
+      "unpaid_invoices": {"default": "mdi:file-document-alert-outline"},
+      "contract_status": {"default": "mdi:file-sign"},
+      "latest_invoice_due_date": {"default": "mdi:calendar-clock"}
+    }
+  },
+  "services": {
+    "submit_reading": {"service": "mdi:counter"}
+  }
+}

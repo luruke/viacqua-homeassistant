@@ -1,0 +1,89 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Viacqua",
+        "description": "Log in with the credentials of the Viacqua customer area (sol.viacqua.it).",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate Viacqua",
+        "description": "The password for {username} is no longer valid.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password",
+      "cannot_connect": "Unable to reach the Viacqua portal",
+      "no_contracts": "No contracts found on this account",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This account is already configured",
+      "reauth_successful": "Re-authentication was successful"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "meter_reading": {
+        "name": "Meter reading"
+      },
+      "last_reading_date": {
+        "name": "Last reading date"
+      },
+      "last_period_consumption": {
+        "name": "Last period consumption"
+      },
+      "daily_average": {
+        "name": "Daily average consumption"
+      },
+      "yearly_consumption": {
+        "name": "Yearly consumption"
+      },
+      "latest_invoice_amount": {
+        "name": "Latest bill amount"
+      },
+      "latest_invoice_due_date": {
+        "name": "Latest bill due date"
+      },
+      "outstanding_balance": {
+        "name": "Outstanding balance"
+      },
+      "unpaid_invoices": {
+        "name": "Unpaid bills"
+      },
+      "annual_volume": {
+        "name": "Contract annual volume"
+      },
+      "contract_status": {
+        "name": "Contract status"
+      }
+    }
+  },
+  "exceptions": {
+    "entry_not_loaded": {
+      "message": "The selected Viacqua entry is not loaded"
+    }
+  },
+  "services": {
+    "submit_reading": {
+      "name": "Submit meter reading",
+      "description": "Sends a self reading (autolettura) of the water meter to Viacqua. This is a real submission.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Account",
+          "description": "The Viacqua account to submit the reading for."
+        },
+        "reading": {
+          "name": "Reading",
+          "description": "Current meter index in m³ (integer, black digits only)."
+        }
+      }
+    }
+  }
+}

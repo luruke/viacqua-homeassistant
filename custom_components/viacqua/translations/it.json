@@ -1,0 +1,89 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Viacqua",
+        "description": "Accedi con le credenziali dell'area clienti Viacqua (sol.viacqua.it).",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Nuova autenticazione Viacqua",
+        "description": "La password per {username} non è più valida.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Username o password non validi",
+      "cannot_connect": "Impossibile raggiungere il portale Viacqua",
+      "no_contracts": "Nessun contratto trovato su questo account",
+      "unknown": "Errore imprevisto"
+    },
+    "abort": {
+      "already_configured": "Questo account è già configurato",
+      "reauth_successful": "Autenticazione aggiornata"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "meter_reading": {
+        "name": "Lettura contatore"
+      },
+      "last_reading_date": {
+        "name": "Data ultima lettura"
+      },
+      "last_period_consumption": {
+        "name": "Consumo ultimo periodo"
+      },
+      "daily_average": {
+        "name": "Consumo medio giornaliero"
+      },
+      "yearly_consumption": {
+        "name": "Consumo annuo"
+      },
+      "latest_invoice_amount": {
+        "name": "Importo ultima bolletta"
+      },
+      "latest_invoice_due_date": {
+        "name": "Scadenza ultima bolletta"
+      },
+      "outstanding_balance": {
+        "name": "Importo da pagare"
+      },
+      "unpaid_invoices": {
+        "name": "Bollette non pagate"
+      },
+      "annual_volume": {
+        "name": "Volume annuo contratto"
+      },
+      "contract_status": {
+        "name": "Stato contratto"
+      }
+    }
+  },
+  "exceptions": {
+    "entry_not_loaded": {
+      "message": "L'account Viacqua selezionato non è caricato"
+    }
+  },
+  "services": {
+    "submit_reading": {
+      "name": "Invia autolettura",
+      "description": "Invia a Viacqua l'autolettura del contatore. È un invio reale.",
+      "fields": {
+        "config_entry_id": {
+          "name": "Account",
+          "description": "L'account Viacqua per cui inviare la lettura."
+        },
+        "reading": {
+          "name": "Lettura",
+          "description": "Lettura attuale in m³ (intero, solo cifre nere)."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "viacqua",
+  "name": "Viacqua (non ufficiale)",
+  "codeowners": ["@luruke"],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/luruke/viacqua-homeassistant",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/luruke/viacqua-homeassistant/issues",
+  "loggers": ["custom_components.viacqua"],
+  "requirements": ["beautifulsoup4>=4.12"],
+  "version": "0.1.0"
+}

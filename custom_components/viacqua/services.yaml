@@ -1,0 +1,16 @@
+submit_reading:
+  fields:
+    config_entry_id:
+      required: true
+      selector:
+        config_entry:
+          integration: viacqua
+    reading:
+      required: true
+      example: 870
+      selector:
+        number:
+          min: 0
+          max: 999999
+          mode: box
+          unit_of_measurement: "m³"

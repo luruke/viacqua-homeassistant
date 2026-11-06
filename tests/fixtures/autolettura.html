@@ -1,0 +1,256 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	AutoLetture
+</title><link rel="Stylesheet" href="../Include/style.css" type="text/css" /><link rel="Stylesheet" href="../include/custom.css" type="text/css" /><link rel="stylesheet" href="../JQuery/development/themes/base/jquery.ui.all.css" />
+</head>
+<body>
+    <form method="post" action="./AutoLettura.aspx?id=22" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="REDACTED" />
+</div>
+<div class="aspNetHidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7547DF00" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="REDACTED" />
+</div>
+    <div id="principale">
+<div id="headerBase" class="header">
+<div id="headerBase1" class="header">
+    <table border="none" cellpadding="0" cellspacing="0" 
+        style="border-style: none; background-image: url('../IMG/logo.bmp'); background-repeat: no-repeat; width: 983px; height: 92px;" >
+        <tr>    
+            <td align="right" valign="bottom" width="40" >
+		        &nbsp;</td>
+            <td rowspan="3"  width="230">
+                &nbsp;</td>
+            <td  align="right" valign="bottom" width="1" 
+                style=" color: #FFFFFF; " >
+		        &nbsp;</td>
+            <td align="right" width="670" 
+                style="text-align: right; "valign="bottom">
+		        <span id="boxHeader_boxHeader1_lblBenvenuto" class="lblHeader">Benvenuto:</span>&nbsp;
+		<span id="boxHeader_boxHeader1_lblUtenteCollegato" class="lblCollegato">ROSSI MARIO</span>
+                 	 &nbsp;-&nbsp;      
+                     <a href="../Login/LogOut.aspx" id="boxHeader_boxHeader1_LogOut" class="secondary_link">Esci</a>&nbsp;
+                    </td>
+        </tr>
+        <tr>
+            <td valign="middle" style="color: #0772ba" rowspan="2">
+                &nbsp;</td>
+            <td align="right" rowspan="2">
+                &nbsp;</td>
+            <td align="right" 
+                style="text-align: right; color: #0772ba;">
+                &nbsp;
+                    </td>
+        </tr>
+        <tr>
+            <td align="right" 
+                style="text-align: right; ">
+ <a href="../Amministrazione/ModificaPassword2.aspx" id="boxHeader_boxHeader1_link_ModificaPassword" class="secondary_link">Modifica&nbsp;password</a>&nbsp;
+                    &nbsp;
+                     &nbsp;<span id="boxHeader_boxHeader1_lbServizio" class="lblHeader">Servizio:</span>
+                     <a href="../CambiaServizio.aspx?srv=AC" id="boxHeader_boxHeader1_lnkAC" onclick="myFunctionAC(this, &#39;red&#39;)" class="secondary_link">&nbsp;Acqua&nbsp;</a>
+                     &nbsp;
+                    </td>
+        </tr>
+    </table>
+</div>
+<div id="Div1" class="header">
+    <hr />
+</div>
+</div>
+<div id="navbarBase" class="navbar" style="font-size: 14px">
+   <div id="boxNavbar_boxDB_navbar" class="navbar" align="center" style="width:980px;height:91px;margin-bottom:45px;position:Center;background-image:url(&#39;../IMG/menu.png&#39;);">
+    <a href="#boxNavbar_boxDB_mMenu_SkipLink"><img alt="Skip Navigation Links" src="/CRM_20_Multi/WebResource.axd?d=7BzMJOL5-sO26_Fx1h1hb2D69_W22iRjU3U-gRG4K38d-YffUqM_sY_9SKbRVci347vZH06kL0yoFC0pX4-mRjunMW41&amp;t=639192045026372022" width="0" height="0" style="border-width:0px;" /></a><div id="boxNavbar_boxDB_mMenu">
+	<ul class="level1">
+		<li><a title="Home" class="level1" href="../Home/Edit_Home.aspx?id=2">
+        Home
+        </a></li><li><a title="Anagrafica" class="level1" href="../Anagrafica/Ricerca_Anagrafica.aspx?id=3">
+        Anagrafica
+        </a></li><li><a title="Fatture" class="level1" href="../Bollette/VisualizzaBollette.aspx?id=17">
+        Fatture
+        </a></li><li><a title="Consumi" class="level1" href="../Consumi/ConsumiWebGas.aspx?id=19">
+        Consumi
+        </a></li><li><a title="AutoLettura" class="level1 selected" href="AutoLettura.aspx?id=22">
+        AutoLettura
+        </a></li><li><a title="Contratti" class="level1" href="../Contratti/VisualizzaContratti.aspx?id=24">
+        Contratti
+        </a></li><li><a title="Modulistica" class="level1" href="../Documenti/Documenti_Visualizza.aspx?id=4">
+        Modulistica
+        </a></li><li><a title="Stato  richieste" class="level1" href="../Attivita/StatoAttivita.aspx?id=25">
+        Storico richieste
+        </a></li><li><a title="Contattaci" class="level1" href="../Contattaci/Contattaci.aspx?id=100">
+        Contattaci
+        </a></li>
+	</ul>
+</div><a id="boxNavbar_boxDB_mMenu_SkipLink"></a>
+       <a href="#boxNavbar_boxDB_mSubMenu_SkipLink"><img alt="Skip Navigation Links" src="/CRM_20_Multi/WebResource.axd?d=7BzMJOL5-sO26_Fx1h1hb2D69_W22iRjU3U-gRG4K38d-YffUqM_sY_9SKbRVci347vZH06kL0yoFC0pX4-mRjunMW41&amp;t=639192045026372022" width="0" height="0" style="border-width:0px;" /></a><div id="boxNavbar_boxDB_mSubMenu">
+	<ul class="level1">
+		<li><a title="AutoLettura" class="level1 selected" href="AutoLettura.aspx">
+        Visualizza
+        </a></li><li><a title="AutoLettura" class="level1" href="Dati_Pozzi.aspx">
+        DatiPozzi
+        </a></li>
+	</ul>
+</div><a id="boxNavbar_boxDB_mSubMenu_SkipLink"></a>
+</div>
+</div>
+        <div id="corpo" class="corpo">
+            <div id="contenuto" class="contenuto" style="margin-left: 0px;">
+<div id="titoloSezione" class="titoloSezione">
+    <h1> <span id="boxNavbarTitolo_lblInserisciautoconsumo">Inserisci Autolettura</span></h1>
+    <h1></h1>
+</div>
+                <div class="divGrid large_width">
+                    <table id="ctrlAutoLetture1_Tab_Edit" align="center" cellspacing="0" cellpadding="2">
+	<tr>
+		<td colspan="9">
+            <h1>
+                <span id="ctrlAutoLetture1_lblAutoConsumo">Autolettura</span>&nbsp;
+            </h1>
+        </td>
+	</tr>
+	<tr>
+		<td colspan="9" align="center">
+            <span id="ctrlAutoLetture1_lblmsgavviso" class="ErrorMex"></span>
+        </td>
+	</tr>
+	<tr>
+		<td style="width: 225px">
+            <span id="ctrlAutoLetture1_Label1"> CONTRATTO</span>
+        </td>
+		<td style="width: 150px" colspan="2">
+            <select name="ctrlAutoLetture1$ddlContratto" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctrlAutoLetture1$ddlContratto\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctrlAutoLetture1_ddlContratto">
+			<option selected="selected" value="2019-19000001N">2019-19000001</option>
+		</select>
+        </td>
+		<td colspan="4" rowspan="5" style="visibility: hidden">
+            <img id="ctrlAutoLetture1_ImageContatore" src="../IMG/contatore_Blank.png" style="height:197px;width:362px;" />
+        </td>
+	</tr>
+	<tr>
+		<td colspan="9" align="center">
+            <table id="ctrlAutoLetture1_tbLettura" style="width: 750px;">
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblTipoLettura" style="display:inline-block;width:133px;">TIPO LETTURA</span>
+                    </td>
+				<td style="width: 150px" colspan="2">
+                        <span id="ctrlAutoLetture1_lblTipoLetturaDescr">Periodica</span>
+                    </td>
+			</tr>
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblDataLetturaPrec" style="display:inline-block;width:133px;">DATA LETTURA PRECEDENTE    </span>
+                    </td>
+				<td style="width: 250px" colspan="2">
+                        <span id="ctrlAutoLetture1_lblDataLetturaPrecDescr">17/07/2026</span>
+                    </td>
+			</tr>
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblLettPrecedente" style="display:inline-block;width:133px;">LETTURA PRECEDENTE</span>
+                    </td>
+				<td style="width: 250px" colspan="2">
+                        <span id="ctrlAutoLetture1_lblLettPrecedenteDescr">857</span>
+                    </td>
+			</tr>
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblDataLettura" style="display:inline-block;width:133px;">DATA LETTURA</span>
+                    </td>
+				<td style="width: 180px" colspan="2">
+                        <input name="ctrlAutoLetture1$txtDataLetturaDescr" type="text" value="06/11/2026" id="ctrlAutoLetture1_txtDataLetturaDescr" disabled="disabled" class="aspNetDisabled" style="width:92px;" />
+                    </td>
+			</tr>
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblLetturaStimata" style="display:inline-block;width:133px;">RANGE LETTURE POSSIBILI</span>
+                    </td>
+				<td style="width: 150px" colspan="2">
+                        <span id="ctrlAutoLetture1_lblLetturaStimataDescr">da 857 a 905</span>
+                    </td>
+			</tr>
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblLettura" style="display:inline-block;width:133px;">LETTURA</span>
+                    </td>
+				<td style="width: 150px">
+                        <input name="ctrlAutoLetture1$txtLettura" type="text" id="ctrlAutoLetture1_txtLettura" style="width:92px;" />
+                    </td>
+				<td style="width: 150px">
+                        <span id="ctrlAutoLetture1_RFLettura" class="ErrorMex" style="visibility:hidden;">*</span>
+                    </td>
+				<td style="width: 100px" align="center">
+                        <input type="submit" name="ctrlAutoLetture1$btnConfermaLettura" value="Conferma" id="ctrlAutoLetture1_btnConfermaLettura" class="button small" style="width:90px;" />
+                    </td>
+				<td style="width: 100px">
+                    </td>
+				<td style="width: 100px">
+                    </td>
+				<td style="width: 100px">
+                    </td>
+			</tr>
+			<tr>
+				<td style="width: 300px">
+                        <span id="ctrlAutoLetture1_lblConsumo" style="display:inline-block;width:133px;">CONSUMO</span>
+                    </td>
+				<td style="width: 150px" colspan="2">
+                        <span id="ctrlAutoLetture1_lblConsumoDescr"></span>
+                    </td>
+				<td style="width: 100px"></td>
+			</tr>
+		</table>
+        </td>
+	</tr>
+	<tr>
+		<td>
+            <span id="ctrlAutoLetture1_RegularExpressionValidator57" class="ErrorMex" style="display:none;">Il valore deve essere di tipo intero.</span>
+        </td>
+	</tr>
+	<tr>
+		<td colspan="9" align="center">
+        </td>
+	</tr>
+	<tr>
+		<td align="right" colspan="4">
+            <h1>&nbsp;       
+            </h1>
+            <input type="hidden" name="ctrlAutoLetture1$HFrangemax" id="ctrlAutoLetture1_HFrangemax" value="905" />
+            <input type="hidden" name="ctrlAutoLetture1$HFcodCliente" id="ctrlAutoLetture1_HFcodCliente" value="40000001" />
+        </td>
+	</tr>
+</table>
+                    <br />
+                    <br />
+                </div>
+<hr />
+<div id="datiAziendali" class="datiAziendali">
+    <span id="boxFooter_lblFooter">
+<b>Viacqua Spa </b>  - viale dell'Industria 23, 36100 Vicenza
+ <br />C.Fiscale e P. IVA 03196760247
+ <br />Servizio Clienti
+ <br />numero verde: 800 154242
+ <br />e-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="redacted">[email&#160;protected]</a>
+   <br />www.viacqua.it
+<br />
+<br />
+<br />
+                <a href="http://www.blucrm.com" target="_blank">Powered by : blucrm</a> 
+ <br />I tipi di cookie che utilizziamo sono <b>"Strettamente necessari"</b>  <a href="https://sol.viacqua.it/CRM_20_Multi/COOKIE_POLICY.htm" target="_blank"> <b> Visualizza: COOKIE POLICY</b> </a> <br />
+Questi cookie sono essenziali al fine di consentire di navigare in tutto il sito ed utilizzare a pieno le sue caratteristiche,
+come ad esempio accedere alle varie aree protette del sito.                  
+                <br />Sito ottimizzato per InternetExplorer 9<br />
+        </span>
+</div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
